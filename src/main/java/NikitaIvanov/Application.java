@@ -56,5 +56,7 @@ public class Application {
         System.out.println(" ");
         System.out.println(pd.prestitiNonRestituiti());
 
+        System.out.println(cd.ricercaAnnoPubblicazione(2024));
+
     }
 }
