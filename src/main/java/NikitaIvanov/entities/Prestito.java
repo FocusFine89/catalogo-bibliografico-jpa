@@ -32,6 +32,14 @@ public class Prestito {
     public Prestito() {
     }
 
+    public Prestito(LocalDate dataInizioPrestito, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva, Catalogo elemento_catalogo, Utente utente) {
+        this.dataInizioPrestito = dataInizioPrestito;
+        this.dataRestituzionePrevista = dataRestituzionePrevista;
+        this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
+        this.elemento_catalogo = elemento_catalogo;
+        this.utente = utente;
+    }
+
     public Prestito(LocalDate dataInizioPrestito, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva) {
         this.dataInizioPrestito = dataInizioPrestito;
         this.dataRestituzionePrevista = dataRestituzionePrevista;
