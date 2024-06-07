@@ -3,8 +3,6 @@ package NikitaIvanov.entities;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-
 @Entity
 @Table(name = "catalogo")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
@@ -17,7 +15,7 @@ public abstract class Catalogo {
     protected String titolo;
 
     @Column(name = "anno_pubblicazione")
-    protected LocalDate annoPubblicazione;
+    protected int annoPubblicazione;
 
     @Column(name = "numero_pagine")
     protected int numeroPagine;
@@ -30,7 +28,7 @@ public abstract class Catalogo {
     public Catalogo() {
     }
 
-    public Catalogo(String titolo, LocalDate annoPubblicazione, int numeroPagine) {
+    public Catalogo(String titolo, int annoPubblicazione, int numeroPagine) {
         this.titolo = titolo;
         this.annoPubblicazione = annoPubblicazione;
         this.numeroPagine = numeroPagine;
@@ -52,11 +50,11 @@ public abstract class Catalogo {
         this.titolo = titolo;
     }
 
-    public LocalDate getAnnoPubblicazione() {
+    public int getAnnoPubblicazione() {
         return annoPubblicazione;
     }
 
-    public void setAnnoPubblicazione(LocalDate annoPubblicazione) {
+    public void setAnnoPubblicazione(int annoPubblicazione) {
         this.annoPubblicazione = annoPubblicazione;
     }
 

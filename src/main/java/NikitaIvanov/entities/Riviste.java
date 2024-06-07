@@ -2,8 +2,6 @@ package NikitaIvanov.entities;
 
 import jakarta.persistence.Entity;
 
-import java.time.LocalDate;
-
 @Entity
 public class Riviste extends Catalogo {
     //Attributi
@@ -13,7 +11,7 @@ public class Riviste extends Catalogo {
     public Riviste() {
     }
 
-    public Riviste(String titolo, LocalDate annoPubblicazione, int numeroPagine, String periodicita) {
+    public Riviste(String titolo, int annoPubblicazione, int numeroPagine, String periodicita) {
         super(titolo, annoPubblicazione, numeroPagine);
         Periodicita = periodicita;
     }

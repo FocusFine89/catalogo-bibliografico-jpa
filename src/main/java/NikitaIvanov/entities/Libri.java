@@ -2,8 +2,6 @@ package NikitaIvanov.entities;
 
 import jakarta.persistence.Entity;
 
-import java.time.LocalDate;
-
 @Entity
 
 
@@ -16,7 +14,7 @@ public class Libri extends Catalogo {
     public Libri() {
     }
 
-    public Libri(String titolo, LocalDate annoPubblicazione, int numeroPagine, String autore, String genere) {
+    public Libri(String titolo, int annoPubblicazione, int numeroPagine, String autore, String genere) {
         super(titolo, annoPubblicazione, numeroPagine);
         this.autore = autore;
         this.genere = genere;
