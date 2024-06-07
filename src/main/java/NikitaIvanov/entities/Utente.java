@@ -3,6 +3,7 @@ package NikitaIvanov.entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "utente")
@@ -10,16 +11,19 @@ public class Utente {
     //Attribut
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long tessera;
+    protected long tessera;
 
     @Column(name = "nome")
-    private String nome;
+    protected String nome;
 
     @Column(name = "cognome")
-    private String cognome;
+    protected String cognome;
 
     @Column(name = "data_nascita")
-    private LocalDate data_nascita;
+    protected LocalDate data_nascita;
+
+    @OneToMany(mappedBy = "utente")
+    protected List<Prestito> prestiti;
 
     //Costruttori
     public Utente() {

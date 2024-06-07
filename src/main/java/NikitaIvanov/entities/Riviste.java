@@ -7,7 +7,7 @@ import java.time.LocalDate;
 @Entity
 public class Riviste extends Catalogo {
     //Attributi
-    private String Periodicita;
+    protected String Periodicita;
 
     //Costruttori
     public Riviste() {

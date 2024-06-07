@@ -5,10 +5,12 @@ import jakarta.persistence.Entity;
 import java.time.LocalDate;
 
 @Entity
+
+
 public class Libri extends Catalogo {
     //Attributi
-    private String autore;
-    private String genere;
+    protected String autore;
+    protected String genere;
 
     //Costruttori
     public Libri() {

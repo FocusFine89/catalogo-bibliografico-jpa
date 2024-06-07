@@ -11,16 +11,19 @@ import java.time.LocalDate;
 public abstract class Catalogo {
     //Attributi
     @Id
-    private String isbn;
+    protected String isbn;
 
     @Column(name = "titolo")
-    private String titolo;
+    protected String titolo;
 
     @Column(name = "anno_pubblicazione")
-    private LocalDate annoPubblicazione;
+    protected LocalDate annoPubblicazione;
 
     @Column(name = "numero_pagine")
-    private int numeroPagine;
+    protected int numeroPagine;
+
+    @OneToOne(mappedBy = "elemento_catalogo")
+    protected Prestito prestito;
 
 
     //Costruttori

@@ -1,8 +1,6 @@
 package NikitaIvanov.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
@@ -11,14 +9,21 @@ import java.time.LocalDate;
 public class Prestito {
     //Atrributi
     @Column(name = "data_inizio_prestito")
-    private LocalDate dataInizioPrestito;
+    protected LocalDate dataInizioPrestito;
 
     @Column(name = "data_restituzione_prevista")
-    private LocalDate dataRestituzionePrevista;
+    protected LocalDate dataRestituzionePrevista;
 
     @Column(name = "data_restituzione_effettiva")
-    private LocalDate dataRestituzioneEffettiva;
+    protected LocalDate dataRestituzioneEffettiva;
 
+    @OneToOne
+    @JoinColumn(name = "elemento_prestato", nullable = false, unique = true)
+    protected Catalogo elemento_catalogo;
+
+    @ManyToOne
+    @JoinColumn(name = "tessera_utente", nullable = false, unique = true)
+    protected Utente utente;
 
     //Costruttori
     public Prestito() {
