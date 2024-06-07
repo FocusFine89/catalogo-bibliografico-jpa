@@ -8,6 +8,9 @@ import java.time.LocalDate;
 @Table(name = "prestiti")
 public class Prestito {
     //Atrributi
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected long id;
     @Column(name = "data_inizio_prestito")
     protected LocalDate dataInizioPrestito;
 
