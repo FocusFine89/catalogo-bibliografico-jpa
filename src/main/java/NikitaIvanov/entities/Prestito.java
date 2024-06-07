@@ -40,11 +40,6 @@ public class Prestito {
         this.utente = utente;
     }
 
-    public Prestito(LocalDate dataInizioPrestito, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva) {
-        this.dataInizioPrestito = dataInizioPrestito;
-        this.dataRestituzionePrevista = dataRestituzionePrevista;
-        this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
-    }
 
     //Metodi
 
@@ -75,9 +70,14 @@ public class Prestito {
     @Override
     public String toString() {
         return "Prestito{" +
-                "dataInizioPrestito=" + dataInizioPrestito +
+                "id=" + id +
+                ", dataInizioPrestito=" + dataInizioPrestito +
                 ", dataRestituzionePrevista=" + dataRestituzionePrevista +
                 ", dataRestituzioneEffettiva=" + dataRestituzioneEffettiva +
+                ", elemento_catalogo=" + elemento_catalogo +
+                ", utente=" + utente +
                 '}';
     }
+
+
 }

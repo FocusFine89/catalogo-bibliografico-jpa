@@ -11,8 +11,8 @@ public class Riviste extends Catalogo {
     public Riviste() {
     }
 
-    public Riviste(String titolo, int annoPubblicazione, int numeroPagine, String periodicita) {
-        super(titolo, annoPubblicazione, numeroPagine);
+    public Riviste(String isbn, String titolo, int annoPubblicazione, int numeroPagine, String periodicita) {
+        super(isbn, titolo, annoPubblicazione, numeroPagine);
         Periodicita = periodicita;
     }
 
@@ -31,6 +31,11 @@ public class Riviste extends Catalogo {
     public String toString() {
         return "Riviste{" +
                 "Periodicita='" + Periodicita + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                ", prestito=" + prestito +
                 '}';
     }
 }

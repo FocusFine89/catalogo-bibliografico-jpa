@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CatalogDAO {
     //Attributi
-    private EntityManager em;
+    private final EntityManager em;
 
     //Costruttori
     public CatalogDAO(EntityManager em) {

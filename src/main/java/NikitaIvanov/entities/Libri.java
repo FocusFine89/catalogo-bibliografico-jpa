@@ -14,8 +14,8 @@ public class Libri extends Catalogo {
     public Libri() {
     }
 
-    public Libri(String titolo, int annoPubblicazione, int numeroPagine, String autore, String genere) {
-        super(titolo, annoPubblicazione, numeroPagine);
+    public Libri(String isbn, String titolo, int annoPubblicazione, int numeroPagine, String autore, String genere) {
+        super(isbn, titolo, annoPubblicazione, numeroPagine);
         this.autore = autore;
         this.genere = genere;
     }
@@ -43,6 +43,11 @@ public class Libri extends Catalogo {
         return "Libri{" +
                 "autore='" + autore + '\'' +
                 ", genere='" + genere + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", titolo='" + titolo + '\'' +
+                ", annoPubblicazione=" + annoPubblicazione +
+                ", numeroPagine=" + numeroPagine +
+                ", prestito=" + prestito +
                 '}';
     }
 }
