@@ -47,7 +47,6 @@ public class Libri extends Catalogo {
                 ", titolo='" + titolo + '\'' +
                 ", annoPubblicazione=" + annoPubblicazione +
                 ", numeroPagine=" + numeroPagine +
-                ", prestito=" + prestito +
                 '}';
     }
 }

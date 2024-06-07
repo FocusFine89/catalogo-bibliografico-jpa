@@ -66,6 +66,10 @@ public class Utente {
         this.data_nascita = data_nascita;
     }
 
+    public List<Prestito> getPrestiti() {
+        return prestiti;
+    }
+
     @Override
     public String toString() {
         return "Utente{" +

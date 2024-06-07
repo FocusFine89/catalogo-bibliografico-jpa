@@ -35,7 +35,6 @@ public class Riviste extends Catalogo {
                 ", titolo='" + titolo + '\'' +
                 ", annoPubblicazione=" + annoPubblicazione +
                 ", numeroPagine=" + numeroPagine +
-                ", prestito=" + prestito +
                 '}';
     }
 }

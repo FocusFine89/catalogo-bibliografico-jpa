@@ -25,7 +25,7 @@ public class Prestito {
     protected Catalogo elemento_catalogo;
 
     @ManyToOne
-    @JoinColumn(name = "tessera_utente", nullable = false, unique = true)
+    @JoinColumn(name = "tessera_utente", nullable = false)
     protected Utente utente;
 
     //Costruttori
@@ -67,6 +67,14 @@ public class Prestito {
         this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
     }
 
+    public Catalogo getElemento_catalogo() {
+        return elemento_catalogo;
+    }
+
+    public Utente getUtente() {
+        return utente;
+    }
+
     @Override
     public String toString() {
         return "Prestito{" +
@@ -75,7 +83,6 @@ public class Prestito {
                 ", dataRestituzionePrevista=" + dataRestituzionePrevista +
                 ", dataRestituzioneEffettiva=" + dataRestituzioneEffettiva +
                 ", elemento_catalogo=" + elemento_catalogo +
-                ", utente=" + utente +
                 '}';
     }
 
